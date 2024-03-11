@@ -39,13 +39,13 @@
         "pagePath": "pages/index/index",
         "iconPath": "static/images/ic_menu_home_nor.png",
         "selectedIconPath": "static/images/ic_menu_home_pressed.png",
-        "text": "首页"
+        "text": "接单"
       },
       {
         "pagePath": "pages/category/index/index",
         "iconPath": "static/images/ic_menu_cate_nor.png",
         "selectedIconPath": "static/images/ic_menu_cate_pressed.png",
-        "text": "分类"
+        "text": "班次"
       },
       {
         "pagePath": "pages/post/nav2post/nav2post",

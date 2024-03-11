@@ -14,7 +14,7 @@ Page({
   },
   onShareAppMessage: function() {
     return {
-      title: '古早交易平台',
+      title: 'P2P速递平台',
       desc: '旅行包裹',
       path: '/pages/index/index'
     }

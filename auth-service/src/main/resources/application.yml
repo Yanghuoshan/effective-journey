@@ -14,8 +14,8 @@ spring:
 #写入你的小程序信息
 wx:
   miniapp:
-    appid:  #微信小程序的appid
-    secret: #微信小程序的Secret
+    appid:  wx7f086cdc278249f2
+    secret: f5467e9d12a4cc60ca8e09d529deaf68
     msgDataFormat: JSON
 
 jwt:
