@@ -18,9 +18,9 @@ Page({
     cateId: 0,
     cateName: '',
     imgList: [],
-    tmpImgList:[],
+    tmpImgList: [],
   },
-  onLoad: function(options) {
+  onLoad: function (options) {
     var that = this;
     user.checkLoginAndNav()
 
@@ -47,11 +47,11 @@ Page({
         })
         for (var i = 0; i < length; i++) {
           that.data.imgList.push('false');
-          var index = that.data.imgList.length-1
+          var index = that.data.imgList.length - 1
           that.setData({
             imgList: that.data.imgList
           })
-          
+
           if (tempFiles[i].size > 4500000) {
             console.log("图片太大")
             that.compressImg(tempFilePaths[i], index)
@@ -126,24 +126,24 @@ Page({
       }
     })
   },
-  removeImg(event){
+  removeImg(event) {
     console.log("删除元素")
     let index = event.currentTarget.dataset.index
     let that = this
     that.data.imgList.splice(index, 1)
     that.data.tmpImgList.splice(index, 1)
     this.setData({
-      imgList: that.data.imgList ,
+      imgList: that.data.imgList,
       tmpImgList: that.data.tmpImgList,
     })
 
   },
-  preview(event){
+  preview(event) {
     let url = event.currentTarget.dataset.url
     let urls = [];
     let imgList = this.data.imgList
-    for (var index in imgList){
-      if (imgList[index]!='false'){
+    for (var index in imgList) {
+      if (imgList[index] != 'false') {
         urls.push(imgList[index])
       }
     }
@@ -153,7 +153,7 @@ Page({
     })
   },
   onPost() {
-    
+
     if (this.data.title.trim() == '') {
       util.showErrorToast('必须填写商品名')
       return;
@@ -167,10 +167,10 @@ Page({
       util.showErrorToast('请选择发货地点')
       return;
     }
-    if (this.data.imgList.length < 1) {
-      util.showErrorToast('请上传图片')
-      return;
-    }
+    // if (this.data.imgList.length < 1) {
+    //   util.showErrorToast('请上传图片')
+    //   return;
+    // }
     if (this.data.cateName.trim() == '') {
       util.showErrorToast('请选择分类')
       return;
@@ -211,12 +211,12 @@ Page({
     }
 
     let imgList = this.data.imgList
-    for (var index in imgList) {
-      if (imgList[index] == 'false') {
-        util.showErrorToast('图片上传中')
-        return;
-      }
-    }
+    // for (var index in imgList) {
+    //   if (imgList[index] == 'false') {
+    //     util.showErrorToast('图片上传中')
+    //     return;
+    //   }
+    // }
 
     let that = this
     user.checkLoginAndNav().then(() => {
@@ -233,7 +233,7 @@ Page({
         ableMeet: this.data.ableMeet,
         ableExpress: this.data.ableExpress,
         images: this.data.imgList,
-      }, 'POST').then(function(res) {
+      }, 'POST').then(function (res) {
         if (res.errno === 0) {
 
           setTimeout(function goback() {
@@ -320,10 +320,10 @@ Page({
 
     console.log(event.detail)
   },
-  onReady: function() {
+  onReady: function () {
 
   },
-  onShow: function() {
+  onShow: function () {
     // 页面显示
     if (app.post.region.id) {
       this.setData({
@@ -343,11 +343,11 @@ Page({
       app.post.cate.name = ''
     }
   },
-  onHide: function() {
+  onHide: function () {
     // 页面隐藏
 
   },
-  onUnload: function() {
+  onUnload: function () {
     // 页面关闭
     //重启
     wx.reLaunch({

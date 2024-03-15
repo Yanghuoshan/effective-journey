@@ -44,7 +44,7 @@ page {
   font-size: 30rpx;
 }
 
-.catalog {
+/* .catalog {
   flex: 1;
   width: 100%;
   background: #fff;
@@ -149,4 +149,62 @@ page {
   color: #333;
   height: 72rpx;
   width: 144rpx;
+} */
+
+.a-section {
+  width: 750rpx;
+  height: auto;
+  background: #fff;
+  color: #333;
+  margin-top: 20rpx;
+}
+
+.a-section .h {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 130rpx;
+}
+
+.a-section .h .txt {
+  padding-right: 30rpx;
+  background-size: 16.656rpx 27rpx;
+  display: inline-block;
+  height: 36rpx;
+  font-size: 33rpx;
+  line-height: 36rpx;
+}
+
+.a-rec .b {
+  width: 750rpx;
+  height: auto;
+  overflow: hidden;
+  padding: 0 45rpx 31rpx;
+}
+
+.a-rec .b .item {
+  width: 302rpx;
+  margin-top: 10rpx;
+  margin-left: 21rpx;
+  margin-right: 21rpx;
+}
+
+.a-rec .b .name {
+  text-align: center;
+  display: block;
+  width: 302rpx;
+  height: 35rpx;
+  margin-bottom: 14rpx;
+  overflow: hidden;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.a-rec .b .price {
+  display: block;
+  text-align: center;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  color: #f94b4b;
 }
