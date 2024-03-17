@@ -9,13 +9,13 @@
   <view class="catalog a-section a-rec">
     <view class="b">
       <view class="item" wx:for="{{indexGoods}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.id}}">
-        <view wx:if="{{item.price == 0}}">
-          <navigator url="../../goods/goods?id={{item.id}}">
-            <image class="img" src="{{item.primaryPicUrl}}" background-size="cover" style="width: 630rpx; height: 300rpx; display: inline-block; box-sizing: border-box"></image>
-            <text class="name" style="width: 649rpx; height: 49rpx; display: block; box-sizing: border-box">{{item.name}}</text>
-            <text class="price" style="width: 649rpx; height: 30rpx; display: block; box-sizing: border-box">￥{{item.price}}</text>
-          </navigator>
-        </view>
+
+        <navigator url="../../goods/goods?id={{item.id}}">
+          <image class="img" src="{{item.primaryPicUrl}}" background-size="cover" style="width: 630rpx; height: 300rpx; display: inline-block; box-sizing: border-box"></image>
+          <text class="name" style="width: 649rpx; height: 49rpx; display: block; box-sizing: border-box">行程</text>
+
+        </navigator>
+
       </view>
     </view>
   </view>

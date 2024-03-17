@@ -48,6 +48,15 @@ Page({
   onLoad: function (options) {
     this.getCatalog();
     this.getIndexData();
+    let i = 0;
+    do {
+      this.setData({
+        page: this.data.page + 1
+      })
+      this.getIndexMore()
+      console.log('刷新');
+      i++;
+    } while (i < 10)
   },
 
   getCatalog: function () {
