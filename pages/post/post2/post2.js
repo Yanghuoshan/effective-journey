@@ -219,12 +219,12 @@ Page({
     }
 
     let imgList = this.data.imgList
-    for (var index in imgList) {
-      if (imgList[index] == 'false') {
-        util.showErrorToast('图片上传中')
-        return;
-      }
-    }
+    // for (var index in imgList) {
+    //   if (imgList[index] == 'false') {
+    //     util.showErrorToast('图片上传中')
+    //     return;
+    //   }
+    // }
 
     let that = this
     user.checkLoginAndNav().then(() => {
