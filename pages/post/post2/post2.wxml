@@ -3,7 +3,7 @@
     <input class="title" maxlength="60" placeholder="标题" bindinput='bindInputTitle' />
 
     <view class="input-box">
-      <textarea class="content" bindinput="bindInputDesc" maxlength="800" placeholder="描述一下待送物品、期望时间、注意事项。" />
+      <textarea class="content" bindinput="bindInputDesc" maxlength="800" placeholder="描述一下出行时间、期望类型、交付方式。" />
       <text class="count">{{800 - desc.length}}</text>
     </view>
 
@@ -30,7 +30,7 @@
 
       </view>
       <view wx:if="{{imgList.length < 10}}" class='add' bindtap='addImage'>
-        <text class='txt'>物品照片</text>
+        <text class='txt'>机票认证*</text>
         <image class='icon' src='/static/images/plus.png'></image>
       </view>
 
@@ -43,10 +43,11 @@
   </view>
 
   <view class="bottom">
-    <button class="r" style="width: 40vw;margin-bottom: 30px;margin-left: 5vw;margin-top: 10px;margin-right: 5vw;padding:0px;float:left; color:grey;">需要送货</button>
-    <!--<navigator url="/pages/post/post2/post2">-->
-    <navigator url="../post2/post2">
-      <button class=" r" bindtap="goto" style="width: 40vw;margin-bottom: 30px;margin-left: 4vw;margin-top: 10px;margin-right: 5vw;padding:0px;float: right;   border: 1px solid #f94b4b;    background: #f94b4b; color: #fff;"> 准备出行 </button>
+    <navigator url="../post/post">
+      <button class="r" style="width: 40vw;margin-bottom: 30px;margin-left: 5vw;margin-top: 10px;margin-right: 5vw;padding:0px;float:left;border: 1px solid #f94b4b;    background: #f94b4b;  color: #fff;">需要送货</button>
+    </navigator>
+    <navigator url="{{'/pages/post/post/post2'}}" class="a">
+      <button class="r" style="width: 40vw;margin-bottom: 30px;margin-left: 4vw;margin-top: 10px;margin-right: 5vw;padding:0px;float: right;   color:grey;"> 准备出行 </button>
     </navigator>
   </view>
 
@@ -60,16 +61,16 @@
 
   <view class="detail">
     <view class="element">
-      <view class="lable">货品估值</view>
-      <view class="rmb">¥</view>
+      <view class="lable">可用重量</view>
+      <view class="rmb">kg</view>
       <input class="price" type="digit" placeholder="0.00" bindinput='bindInputPrice' />
     </view>
     <view class="element">
-      <view class="lable">委托价格</view>
+      <view class="lable">期望酬金</view>
       <view class="rmb">¥</view>
       <input class="price" type="digit" placeholder="0.00" bindinput='bindInputMarketPrice' />
     </view>
-    <view class="element">
+    <!--<view class="element">
       <view class="lable">二级运费</view>
       <view class="rmb">¥</view>
       <input class="price" type="digit" placeholder="0.00" bindinput='bindInputPostage' value='{{postage}}' disabled='{{isPostageFree}}' />
@@ -78,9 +79,9 @@
           <checkbox value="true" color="#fd9f06" />包邮
         </label>
       </checkbox-group>
-    </view>
+    </view>-->
     <navigator url="../category/category" class="element">
-      <view class="lable">分类</view>
+      <view class="lable">接受类别</view>
 
       <view class="cate">{{cateName ? cateName : '选择分类'}}</view>
       <image background-size="cover" class="i" src="/static/images/address_right.png"></image>

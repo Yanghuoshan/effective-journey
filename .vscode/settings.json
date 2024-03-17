@@ -33,8 +33,6 @@
   "editor.tabSize": 2,
   "[wxml]": {
     "editor.defaultFormatter": "wechat.miniprogram.wxml-language-features"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "HookyQR.beautify"
+
   }
 }

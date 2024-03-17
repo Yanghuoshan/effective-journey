@@ -20,7 +20,8 @@
     "pages/user/user",
     "pages/chat/chatIndex/chatIndex",
     "pages/chat/chatForm/chatForm",
-    "pages/undone/undone"
+    "pages/undone/undone",
+    "pages/post/post2/post2"
   ],
   "window": {
     "backgroundTextStyle": "dark",

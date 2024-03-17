@@ -21,7 +21,6 @@ Page({
     tmpImgList: [],
   },
 
-
   goto: function () {
     wx.navigateTo({
       url: '/pages/post/post/post2',
@@ -176,10 +175,10 @@ Page({
       util.showErrorToast('请选择发货地点')
       return;
     }
-    // if (this.data.imgList.length < 1) {
-    //   util.showErrorToast('请上传图片')
-    //   return;
-    // }
+    if (this.data.imgList.length < 1) {
+      util.showErrorToast('请上传图片')
+      return;
+    }
     if (this.data.cateName.trim() == '') {
       util.showErrorToast('请选择分类')
       return;
@@ -220,12 +219,12 @@ Page({
     }
 
     let imgList = this.data.imgList
-    // for (var index in imgList) {
-    //   if (imgList[index] == 'false') {
-    //     util.showErrorToast('图片上传中')
-    //     return;
-    //   }
-    // }
+    for (var index in imgList) {
+      if (imgList[index] == 'false') {
+        util.showErrorToast('图片上传中')
+        return;
+      }
+    }
 
     let that = this
     user.checkLoginAndNav().then(() => {
